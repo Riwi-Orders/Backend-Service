@@ -1,0 +1,44 @@
+# Docker ignore file to reduce build context size
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# Maven
+target/
+!target/*.jar
+.mvn/wrapper/maven-wrapper.jar
+
+# Logs
+*.log
+logs/
+
+# Documentation
+*.md
+!README.md
+docs/
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+.docker/
+
+# Environment files
+.env
+.env.*
+*.env
+
+# Test files
+src/test/
+
+# Misc
+.DS_Store
+Thumbs.db
