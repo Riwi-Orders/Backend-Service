@@ -1,5 +1,7 @@
 package com.riwi.order_management.dto.request;
 
+import com.riwi.order_management.entity.UserRole;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -26,4 +28,8 @@ public class UserCreateRequest {
     @NotBlank(message = "Password is required")
     @Size(min = 8, message = "Password must be at least 8 characters")
     private String password;
+
+    // Optional: defaults to USER if not specified
+    @Builder.Default
+    private UserRole role = UserRole.USER;
 }

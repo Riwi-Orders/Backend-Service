@@ -44,7 +44,7 @@ public class AuthService {
                 .name(request.getName())
                 .email(request.getEmail())
                 .passwordHash(passwordEncoder.encode(request.getPassword()))
-                .role(UserRole.USER) // Default role is USER
+                .role(request.getRole() != null ? request.getRole() : UserRole.USER)
                 .build();
 
         User savedUser = userRepository.save(user);
