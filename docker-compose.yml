@@ -29,7 +29,8 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/order_management
       SPRING_DATASOURCE_USERNAME: ${DB_USERNAME:-postgres}
       SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD:-postgres}
-      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_HIBERNATE_DDL_AUTO: validate
+      SPRING_FLYWAY_ENABLED: "true"
       JWT_SECRET: ${JWT_SECRET:-dGhpc2lzYXZlcnlsb25nYW5kc2VjdXJlc2VjcmV0a2V5Zm9yand0dG9rZW5zMTIz}
       JWT_EXPIRATION: ${JWT_EXPIRATION:-86400000}
     ports:
